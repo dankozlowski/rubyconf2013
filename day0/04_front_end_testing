@@ -1,0 +1,39 @@
+ Luke Francl - swiftype
+
+ "Javascript now works" - Paul Graham
+ Third Party Javascript - Vinegar, Kovalyov
+
+Problem: We're executing in an environment we can't control.
+
+Feature: Add mobile optimized search WITHOUT BREAKING ANYTHING D:
+  Tools: Capybara, PhantomJS, Poltergeist
+  `brew install phantomjs`
+  add polgergist and capybara to gemfile.
+
+  github/look/frontend-testing-for-skeptics
+
+js_errors true: failure tests if there's a JS error
+inspector true: gives a live debugger
+
+Simplest test for country search?
+  Visit path, and fill in a field.  This will fail if any JS error occurs.
+  in the describe block, set JS to true!
+
+Gotchas:
+  Waiting for stuff: Capybara will wait for things to change.  
+    Syncrhonize: retry logic that evaluates over and over until it's condutions are true.
+  PhantomJS crashes, sometimes not repeatable :/
+    1% of time tests will fail because pJS crashed.
+  Transactions in Capybara suck
+    Capybara runs the test in another thread.  Capybara will rollback before it sees the data, or if you're using a cleaner the db may be cleared before Capybara has a chance to see the data.
+      Run all tests that don't require JS.  
+
+Next step?
+  Javascript Unit Testing
+    Jasmine: Matthew O'Riordan
+    Modeset: Teabag gem
+
+  Perceptual Diffs
+    Brett Slatkin perceptual diffs for automated testing and conitnupus deployment
+
+Skeptic no more!
