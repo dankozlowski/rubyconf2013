@@ -1,1 +1,14 @@
 Using Flog, we can see that many parts of our app are highly ineffective.
+Refactoring the model is less effective than refactoring the controller 
+  Move logic from controller actions to models, move business out to services!
+  ::Services:: == module for performing stuff
+    Now we're compatnig the model to a services module
+    Service methods are tested independent of calling class
+    # When a spec fails, it's telling you something.  Listen!
+  Name your service for the action it performs
+When organizing the logic in an object, use verb titles for your methods that tell a story
+  When organinized step-wise bu forucinsg on the story of the module, this flog drops.
+  No state maintained!
+
+  gem install light-service
+  https://github.com/adomokos/light-service
