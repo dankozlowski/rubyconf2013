@@ -1,0 +1,28 @@
+Constellation Architecture - All the little apps
+How to take the big app and make it a little one - iamshane.com - @farmhouse
+
+tl;dr: we use little apps, each app has a single tenant database, no push (all pull), HTML over the wire - no JSON.
+
+Backstory: Rails app in 2007 (first app!), came from Java, learning by doing.  6 years later, everyone has learned a lot!  And now the app is a peice of shit.  Things exist that people are scared to touch.  Tons of tribal knowledge.  This seems to be a common trajectory; there has to be a better way.  Unbundle: take the big thing and break it up.
+
+37 Signals: many products in one, so let's break them apart and sell them separately!  Also makes codebase much smaller and easier to manage.  
+
+SERVICES ALL THE THINGS - SOA (service oriented architecture)
+
+Multitenant DB: easy to break, security risk, etc.
+Single tenant db: all the data is owned by one user.  There is no users table (necessarily), and we don't lose uptime or data.  Leads to many databases because of many users - could get insane.  Only a crazy idea if you have one app for many databases.  Many apps, many databases.  
+
+What if each app was responsible for itself?  The app shoud phone home to ask if it should update to work around Heroky constraints.
+Limited concerns: A lot of our apps start to look like scaffolds!
+
+G5 Hub: In order for each user to have their own app, we have the g5 hub where admins can create new clients/users.
+
+Blogs: 
+  Users publishes blog post.  App creates a link, and adds post to index and feed.
+  HTML is the lingua franca of our culture.
+    HTML is a great data container!
+
+  Check out h-cards
+  h-entry - HTML ATOM entry
+
+  We make sites that talk to eachother and that are read in HTML.  This scales awesome!
