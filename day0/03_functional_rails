@@ -12,3 +12,11 @@ When organizing the logic in an object, use verb titles for your methods that te
 
   gem install light-service
   https://github.com/adomokos/light-service
+
+Takeaway:
+Get out of the framework!  Draw out the logic without being resitrctec by the famework.
+The code should tell the story
+dont use state if you don't have to
+separate data from behavior
+grow your code horizontally - don't add another method, create a new class
+make it simple!s
