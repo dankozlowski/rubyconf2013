@@ -1,0 +1,32 @@
+BoF MTW nights - sign up at entrance
+
+DHH
+  Good frameowrks are extractions not inventions - you can't invent a good framework
+  Tools built for the sake of building a tool - no bueno.
+  So, I'm not going to care about other people: I'm going to build the framework I need.
+  Because we're building off us, we end up with something that's actually useful to us!
+    Good stuff happens when we're fucking annoyed - pretty examples don't translate to a good tool.
+  Remember, Rails was created in 2003.  Totally different ecosystem, totally different tech basis.
+    The only thing that doesn't improve are people's brains.
+  In 2003, the major competitor was Java - most of the thinking on how to build web apps came from Java
+  So much has changed in the last ten years, so why are we still here?
+    It's the pioneering spirit that keeps us proverbially heading weat
+      We don't rest, we don't really care about stability: we want to move forward quickly.
+  "Good software takes ten years.  Get use to it." - Joel on Software 2001
+    You can build something good for you in 6m, but realy change takes years.
+
+  People like native because it's fast
+    So can we get that speed with Web? == Rails 4
+
+    Patterns for speed:
+      Key-based cache expiration (generational caching)
+        Caches are too hard to manage, and thus people either don't do it or do it wrong 
+        The more bugs we aquash in rails, the more ambitious we can become.
+      Russian doll nested cachine (next layer in the make shit go fast cake)
+        touching: true; if something changes in the comment, we touch up the chain and that bumps the updated_ats!
+      Javascirpt decoration o shared caches
+        Live javacsript covnersations let us not cache things like times that would change on a per-user basis
+        Same thing with edit permissions -- only gets hard when we have to hide infomraiton from the user
+      Turbolinks Process Persistence
+      Polling for Javascript Updates
+        
